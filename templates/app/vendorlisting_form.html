@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block content %}
+<br>
+<div class="container">
+  <h4>Create your Business listing/ Updates here</h4>
+  <br>
+<form action="" method="post" enctype="multipart/form-data">{% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="Save">
+</form>
+<h5>We appreciate you taking the time to complete the form when adding phone number seven digits only</h5>
+<h5>Your listing information will be updated</h5>
+
+</div>
+
+
+{% endblock %}

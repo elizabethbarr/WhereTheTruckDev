@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+
+{% block content %}
+<div class="container">
+<br>
+<br>
+<br>
+<h4>vendor listings:</h4>
+
+{% for object in object_list %}
+<img src='{{object.uploads}}'class= 'img-responsive' />
+<br>
+<br>
+
+<h3>Restaurant name, {{ object.vendor_name }}</h3>
+<p>Our Email {{ object.vendor_email }}</p>
+<p>Our Phone (864) {{ object.vendor_phone }}</p>
+<h3>What we specialize in,  {{ object.vendor_bio }}</h3>
+<p>Date Updated {{ object.date_updated }}</p>
+<h3>Todays Location, {{object.todays_location}}</h3>
+<h3>Todays hours,  {{object.todays_hours}}</h3>
+<h3>Serving today, {{object.serving_today}}</h3>
+<p>Service type truck {{object.truck_service}}</p>
+<p>Service type cart {{object.cart_service}}</p>
+<p>Service type pop up {{object.popup_service}}</p>
+<br>
+<br>
+
+{% endfor %}
+
+
+</div>
+{% endblock %}

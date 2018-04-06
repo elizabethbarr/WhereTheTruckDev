@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+
+
+
+{% block content %}
+<div class="container">
+<br>
+<br>
+<br>
+<img src="{% static 'app/img/foodtrucks512x512.png' %}" alt="" style="width:512px;height:512px;"/>
+<br>
+<br>
+<br>
+  <h3>Welcome to Where the Truck </h3>
+  <h5>Pay for your monthly subscription</h5>
+  <h4>Here</h4>
+  <form action="https://wherethepaymentbro.herokuapp.com">
+    <input type="submit" value="Go to Stripe payment" />
+  </form><br>
+
+    <p><h5>Register your account to get your information to post live on Alexa.</h5></p>
+    <p><h5>Use your log in credentials to access your vendor information page.</h5></p>
+
+
+
+</div>
+
+
+{% endblock %}
